@@ -26,9 +26,11 @@ from vllm.model_executor.model_loader.weight_utils import (
     get_quant_config, initialize_dummy_weights, np_cache_weights_iterator,
     pt_weights_iterator, safetensors_weights_iterator)
 from vllm.model_executor.models.llava import LlavaForConditionalGeneration
+from vllm.model_executor.models.blip2 import Blip2ForConditionalGeneration
 
 _VISION_MODEL_CLASSES = [
     LlavaForConditionalGeneration,
+    Blip2ForConditionalGeneration,
 ]
 
 logger = init_logger(__name__)

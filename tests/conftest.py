@@ -7,7 +7,7 @@ import pytest
 import torch
 from PIL import Image
 from transformers import (AutoModelForCausalLM, AutoProcessor,
-                          LlavaForConditionalGeneration)
+                          LlavaForConditionalGeneration, Blip2ForConditionalGeneration)
 
 from vllm import LLM, SamplingParams
 from vllm.config import TokenizerPoolConfig, VisionLanguageConfig
@@ -131,6 +131,7 @@ _STR_DTYPE_TO_TORCH_DTYPE = {
 
 _VISION_LANGUAGE_MODELS = {
     "llava-hf/llava-1.5-7b-hf": LlavaForConditionalGeneration,
+    "Salesforce/blip2-opt-2.7b": Blip2ForConditionalGeneration,
 }
 
 
